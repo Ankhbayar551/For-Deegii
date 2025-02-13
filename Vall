@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f0f0;
+            flex-direction: column;
+            text-align: center;
+        }
+        button {
+            padding: 15px 25px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #ff69b4;
+            color: white;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #ff3385;
+        }
+        #loveIcon, #brokenHeartIcon {
+            display: none;
+            font-size: 50px;
+            margin-top: 20px;
+        }
+        #loveIcon {
+            color: #ff0000;
+        }
+        #brokenHeartIcon {
+            color: #a52a2a;
+        }
+    </style>
+</head>
+<body>
+    <p>Will you be my Valentine?</p>
+    <button id="yesButton" onclick="answerYes()">YES</button>
+    <button id="noButton" onclick="answerNo()">NO</button>
+    
+    <div id="loveIcon">💖 I LOVE YOU!</div>
+    <div id="brokenHeartIcon">💔</div>
+
+    <script>
+        function answerYes() {
+            document.getElementById('yesButton').style.display = 'none';  // Hide YES button
+            document.getElementById('noButton').style.display = 'none';  // Hide NO button
+            document.getElementById('loveIcon').style.display = 'block'; // Show "I LOVE YOU" icon
+        }
+
+        function answerNo() {
+            document.getElementById('yesButton').style.display = 'none';  // Hide YES button
+            document.getElementById('noButton').style.display = 'none';  // Hide NO button
+            document.getElementById('brokenHeartIcon').style.display = 'block'; // Show Broken Heart icon
+        }
+    </script>
+</body>
+</html>
